@@ -1,21 +1,23 @@
 const mainBox = document.getElementById("container");
 const result = document.getElementById("result");
 
+const refresh = document.createElement("button");
 const firstString = document.createElement("input");
 const secondString = document.createElement("input");
-const refresh = document.createElement("button");
+const check = document.createElement("button");
 
+
+refresh.innerHTML = `<span class="material-symbols-outlined" style='color: white; padding: 5px;'>refresh</span>`
 firstString.placeholder = "Enter the first string";
 secondString.placeholder = "Enter the second string";
-refresh.innerHTML = 'Refresh'
+check.innerHTML = `<p style='padding: 1rem;'>Check</p>`
 
-firstString.classList.add = "firstBox";
-secondString.classList.add = "secondBox";
-refresh.classList.add = 'but'
-
+mainBox.appendChild(refresh)
 mainBox.appendChild(firstString);
 mainBox.appendChild(secondString);
-mainBox.appendChild(refresh)
+mainBox.appendChild(check)
+
+check.addEventListener('click', checkIsomorphic)
 
 function isomorphic(str1, str2) {
   for (let i = 0; i < str1.length; i++) {
