@@ -7,8 +7,8 @@ const secondString = document.createElement('input')
 const check = document.createElement('button')
 
 refresh.innerHTML = `<span class="material-symbols-outlined" style='color: white; padding: 5px;'>refresh</span>`
-firstString.placeholder = 'Enter the first string'
-secondString.placeholder = 'Enter the second string'
+firstString.placeholder = 'Enter the first string...'
+secondString.placeholder = 'Enter the second string...'
 check.innerHTML = `<p style='padding: 1rem;'>Check</p>`
 
 mainBox.appendChild(refresh)
@@ -35,13 +35,13 @@ function checkIsomorphic () {
   const answer = isomorphic(string1, string2)
 
   if (string1 === '' && string2 === '') {
-    result.innerHTML += `<span class="material-symbols-outlined" style="color: red; font-size: 1.5rem;">error</span>` + 'No word has been entered, please try again!'
+    result.innerHTML = `<span class="material-symbols-outlined" style="color: red; font-size: 1.5rem;">error</span>` + 'No word has been entered, please try again!'
   } else if (string1.length !== string2.length) {
-    result.innerHTML += `<span class="material-symbols-outlined" style="color: red; font-size: 1.5rem;">error</span>` + 'The length of your strings should be the same'
+    result.innerHTML = `<span class="material-symbols-outlined" style="color: red; font-size: 1.5rem;">error</span>` + 'The length of your strings should be the same'
   } else if (answer) {
-    result.innerHTML += 'The word entered is isomorphic'
+    result.innerHTML = 'The word entered is isomorphic'
   } else {
-    result.innerHTML += 'The word entered is not isomorphic'
+    result.innerHTML = 'The word entered is not isomorphic'
   }
 }
 
