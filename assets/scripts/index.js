@@ -6,7 +6,7 @@ const firstString = document.createElement('input')
 const secondString = document.createElement('input')
 const check = document.createElement('button')
 
-refresh.innerHTML = `<span class='material-symbols-outlined' style='color: white; padding: 5px;'>refresh</span>`
+refresh.innerHTML = '<span class="material-symbols-outlined" style="color: white; padding: 5px;">refresh</span>'
 firstString.placeholder = 'Enter the first string...'
 secondString.placeholder = 'Enter the second string...'
 check.innerHTML = "<p style= 'padding: 1rem;'>Check</p>"
